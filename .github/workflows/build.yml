@@ -17,6 +17,7 @@ jobs:
           distribution: 'temurin'
       - uses: android-actions/setup-android@v3
       - run: npm install
+      - run: mkdir -p www && cp www_index.html www/index.html
       - run: npx cap add android
       - run: npx cap copy android
       - run: chmod +x android/gradlew
